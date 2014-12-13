@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: killswitch.PcbDoc   6/23/2012  3:44:59 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : killswitch.TXT
+EIA File   : killswitch.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        28mil (0.7112mm)         Round          6                288.25 Inch (7321.43 mm)
+T2        35.43mil (0.89992mm)     Round          36               290.95 Inch (7390.03 mm)
+T3        149.5mil (3.7973mm)      Round          4                289.35 Inch (7349.40 mm)
+---------------------------------------------------------------------------
+Totals                                            46               868.54 Inch (22060.86 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
