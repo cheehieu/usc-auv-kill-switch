@@ -6,7 +6,7 @@ usc-auv-kill-switch
 ## Overview
 A *kill switch* is arguably one of the most important components in any robotic system. It's master enable is what will give humans the advantage in an apocalyptic robot war.
 
-This kill switch was designed for an autonomous underwater vehicle, serving as a thruster enable to initiate navigation or to "kill" the AUV when its thrusters go awry. Being an 
+This kill switch was designed for an autonomous underwater vehicle, serving as a thruster enable to initiate navigation or to "kill" the AUV when its thrusters go awry. Being interfaced to an underwater vehicle, the switch must be easily accessible, manipulatable, and readable.
 
 ## Hardware
 * Mechanical design
