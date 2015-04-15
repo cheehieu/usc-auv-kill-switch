@@ -4,7 +4,7 @@ title: usc-auv-kill-switch
 subtitle: A thruster enable, complete with capacitive touch sensor, magnetic reed switch, μC, LCD, LEDs.
 ---
 
-<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v1.JPG">
+<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_glow.jpg">
 
 ## Overview
 A *kill switch* is arguably one of the most important components in any robotic system. It's master enable is what will give humans the advantage in an apocalyptic robot war.
@@ -12,7 +12,10 @@ A *kill switch* is arguably one of the most important components in any robotic 
 This kill switch was designed for an autonomous underwater vehicle, serving as a thruster enable to initiate navigation or to "kill" the AUV when its thrusters go awry. Being an 
 
 ## Hardware
-Mechanical design
+* Mechanical design
+* Transparent acrylic window
+* Waterproof aluminium enclosure with double o-ring seals
+* Rotating switch with embedded neodymium magnet to trigger hall sensor
 
 <img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/mech.jpg">
 
@@ -24,12 +27,13 @@ Mechanical design
 * Magnetic hall sensor
 * Capacitive touch sensor
 
-<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v1.jpg">
+<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v1.JPG">
 
 ### Rev. 2
 * Arduino Nano microcontroller module
 * Super-bright CREE red and white status LEDs
 * Magnetic hall sensor
+
 <img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v2.jpg">
 
 ## Software
