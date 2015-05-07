@@ -54,13 +54,13 @@ else
 	lcd.str(string("on "))
 ...
 'Display status on LEDs
-outa[16]:=ina[MAG]&ina[TOUCH]           'green: good (even)                      
-outa[17]:=!ina[MAG]|!ina[TOUCH]         'red: kill (odd)                     
-outa[18]:=ina[MAG]&ina[TOUCH]             
+outa[16]:=ina[MAG]&ina[TOUCH]           'green: good (even)
+outa[17]:=!ina[MAG]|!ina[TOUCH]         'red: kill (odd)
+outa[18]:=ina[MAG]&ina[TOUCH]
 outa[19]:=!ina[MAG]|!ina[TOUCH]
-outa[20]:=ina[MAG]&ina[TOUCH]             
+outa[20]:=ina[MAG]&ina[TOUCH]
 outa[21]:=!ina[MAG]|!ina[TOUCH]
-outa[22]:=ina[MAG]&ina[TOUCH]             
+outa[22]:=ina[MAG]&ina[TOUCH]
 outa[23]:=!ina[MAG]|!ina[TOUCH]
 ```
 
