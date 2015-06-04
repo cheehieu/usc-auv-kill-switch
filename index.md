@@ -7,29 +7,31 @@ subtitle: A thruster enable, complete with capacitive touch sensor, magnetic ree
 <img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_glow.jpg">
 
 ## Overview
-A *kill switch* is arguably one of the most important components in any robotic system. Its master enable is what will give humans the advantage in an apocalyptic robot war.
+A *kill switch* is arguably one of the most important components in any robotic system. This master enable is what will give humans the upper-hand in the event of an apocalyptic robot uprising.
 
-This kill switch was designed for an autonomous underwater vehicle, serving as a thruster enable to initiate navigation or to "kill" the AUV when its thrusters go awry. Being interfaced to an underwater vehicle, the switch must be easily accessible, manipulatable, and readable.
+This kill switch was designed for an autonomous underwater vehicle, serving as a thruster enable to initiate navigation or to "kill" the AUV when its thrusters go awry. Being interfaced to an underwater vehicle, the switch must be waterproof, easily accessible, and intuitive to use.
 
 ## Hardware
-* Mechanical design
-* Transparent acrylic window
-* Waterproof aluminium enclosure with double o-ring seals
-* Rotating switch with embedded neodymium magnet to trigger hall sensor
+In my time with the USC AUV team, I built two versions of the kill switch. The first of which, was my first ever PCB design. The second revision was an effort to miniaturize the board and simplify the software interface.
 
-<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/mech.jpg">
+Both kill switch boards were housed in a custom-built waterproof aluminium enclosure. Machined in our lab, the enclosure featured a transparent acrylic "window" to view sensor state, double o-ring seals for waterproofing, and a rotating shell with embedded neodymium magnet to trigger the hall sensor.
+
+<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_enclosure.jpg">
 
 ### Rev. 1
-
+This is the first PCB I ever designed. It was a 2-layer board designed with the free version of Eagle.
 * Parallax Propeller microcontroller
 * Red and green status LEDs
 * 2x16 character LCD
 * Magnetic hall sensor
 * Capacitive touch sensor
 
-<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v1.JPG">
+<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/killswitch_rev1.png">
+
+<img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v1.jpg">
 
 ### Rev. 2
+This revision was an attempt to miniaturize the design and simplify the software interface with an Arduino. It was a 2-layer board designed with Altium Designer.
 * Arduino Nano microcontroller module
 * Super-bright CREE red and white status LEDs
 * Magnetic hall sensor
@@ -50,26 +52,27 @@ TOUCH     = 2
 if ina[MAG] == 1
 	lcd.str(string("off"))
 else
-	lcd.str(string("on ")) 
+	lcd.str(string("on "))
 if ina[TOUCH] == 1
 	lcd.str(string("off"))
 else
 	lcd.str(string("on "))
 ...
 'Display status on LEDs
-outa[16]:=ina[MAG]&ina[TOUCH]           'green: good (even)                      
-outa[17]:=!ina[MAG]|!ina[TOUCH]         'red: kill (odd)                     
-outa[18]:=ina[MAG]&ina[TOUCH]             
+outa[16]:=ina[MAG]&ina[TOUCH]           'green: good (even)
+outa[17]:=!ina[MAG]|!ina[TOUCH]         'red: kill (odd)
+outa[18]:=ina[MAG]&ina[TOUCH]
 outa[19]:=!ina[MAG]|!ina[TOUCH]
-outa[20]:=ina[MAG]&ina[TOUCH]             
+outa[20]:=ina[MAG]&ina[TOUCH]
 outa[21]:=!ina[MAG]|!ina[TOUCH]
-outa[22]:=ina[MAG]&ina[TOUCH]             
+outa[22]:=ina[MAG]&ina[TOUCH]
 outa[23]:=!ina[MAG]|!ina[TOUCH]
 ```
 
 
 ### Rev. 2
-The Arduino Nano uses a simple sketch developed in the Arduino IDE. 
+The Arduino Nano uses a simple sketch developed with the Arduino IDE.
+
 ```
 const int REED_SW = A0;
 const int RED_LED1 = 3;
