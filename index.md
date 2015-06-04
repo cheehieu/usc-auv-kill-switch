@@ -20,6 +20,7 @@ Both kill switch boards were housed in a custom-built waterproof aluminium enclo
 
 ### Rev. 1
 This is the first PCB I ever designed. It was a 2-layer board designed with the free version of Eagle.
+
 * Parallax Propeller microcontroller
 * Red and green status LEDs
 * 2x16 character LCD
@@ -32,6 +33,7 @@ This is the first PCB I ever designed. It was a 2-layer board designed with the 
 
 ### Rev. 2
 This revision was an attempt to miniaturize the design and simplify the software interface with an Arduino. It was a 2-layer board designed with Altium Designer.
+
 * Arduino Nano microcontroller module
 * Super-bright CREE red and white status LEDs
 * Magnetic hall sensor
@@ -39,7 +41,7 @@ This revision was an attempt to miniaturize the design and simplify the software
 <img src="http://niftyhedgehog.com/usc-auv-kill-switch/images/kill_switch_v2.jpg">
 
 ## Software
-The kill switch code monitors the magnetic sensor, and outputs a corresponding digital signal to the host processor, which feeds the enable signal to a motor control driver. 
+The kill switch code monitors the on-board sensors, and outputs a corresponding digital signal to the host processor, which feeds the enable signal of the motor control driver with direct access to the robot's thrusters. 
 
 ### Rev. 1
 The Parallax Propeller microcontroller uses a programming language called Spin. The core input/output code is shown below. I also implemented a few LED patterns for special events including a color circulation, color flickering, and random.
